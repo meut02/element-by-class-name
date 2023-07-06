@@ -1,28 +1,26 @@
 
-var header=document.querySelector('#main-header')
-header.style.borderBottom='solid 4px #ccc'
-var input=document.querySelector('input')
-input.value='hello world'
+var itemList=document.querySelector('#items')
+itemList.parentNode.style.backgroundColor='grey' 
+itemList.children[1].style.backgroundColor='yellow'
+ itemList.firstElementChild.textContent='hello1'
+ itemList.lastElementChild.textContent='hello4'
+ 
+itemList.previousElementSibling.style.color='pink'
 
-var submit=document.querySelector('input[type="submit"]')
-submit.value='SEND'
-var item=document.querySelector('.list-group-item')
-item.style.color='red'
+ var newDiv=document.createElement('div')
+ newDiv.className='hello'
+ newDiv.id='hello1'
+ newDiv.setAttribute('title','Hello Div')
 
+ var newDivText=document.createTextNode('Hello World')
 
-var lastitem=document.querySelector('.list-group-item:last-child')
-lastitem.style.color='blue'
+ newDiv.appendChild(newDivText)
+ 
 
+ var container=document.querySelector('header .container')
+ console.log(container)
+ var h1=document.querySelector('header h1')
+ 
 
-var seconditem=document.querySelector('.list-group-item:nth-child(2)')
-seconditem.style.color='cyan'
-
-
-
-var titles=document.querySelectorAll('.title')
-titles[0].textContent='Hello'
-var odd=document.querySelectorAll('li:nth-child(odd)')
-for(var i=0;i<odd.length;i++)
-{
-    odd[i].style.backgroundColor="green"
-}
+ container.insertBefore(newDiv,h1)
+ newDiv.style.fontSize='30px'
