@@ -1,11 +1,11 @@
-console.log("hello")
-var items=document.getElementsByClassName('list-group-item')
-console.log(items)
-items[1].textContent='hello2'
-items[1].style.fontWeight='bold'
-items[1].style.backgroundColor='yellow'
 
-for(var i=0;i<items.length;i++)
+var li=document.getElementsByTagName('li')
+console.log(li)
+li[1].textContent='hello2'
+li[1].style.fontWeight='bold'
+li[1].style.backgroundColor='yellow'
+
+for(var i=0;i<li.length;i++)
 {
-    items[i].style.backgroundColor='grey'
+ li[i].style.backgroundColor='grey'
 }
